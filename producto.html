@@ -30,26 +30,36 @@
     </nav>
     <main class="contenedor">
       <h1>React JS</h1>
-      <div class="camisa"></div>
-      <img class="camisa__imagen" src="/img/3.jpg" alt="Imagen Producto" />
-      <div class="camisa__contenido">
-        <form class="formulario">
+      <div class="camisa">
+        <img class="camisa__imagen" src="/img/3.jpg" alt="Imagen Producto" />
+        <div class="camisa__contenido">
           <p>
             Etiam sit amet eros ex. Ut tincidunt velit neque, interdum dapibus
             augue suscipit ut. In hac habitasse platea dictumst. Nam turpis
             urna, volutpat gravida urna vitae, consequat ornare enim. Mauris
             eget sodales risus. Nunc et dolor feugiat, rhoncus augue id
           </p>
-          <select name="" id="">
-            <!-- disabled no permite seleccionar esa opcion -->
-            <option disabled selected>Seleccionar Talla</option>
-            <option value="">Chica</option>
-            <option value="">Mediana</option>
-            <option value="">Grande</option>
-          </select>
-          <input type="number" placeholder="Cantidad" min="1" />
-          <input type="submit" value="Agregar al Carrito" />
-        </form>
+          <form class="formulario">
+            <select class="formulario__campo">
+              <!-- disabled no permite seleccionar esa opcion -->
+              <option disabled selected>Seleccionar Talla</option>
+              <option value="">Chica</option>
+              <option value="">Mediana</option>
+              <option value="">Grande</option>
+            </select>
+            <input
+              class="formulario__campo"
+              type="number"
+              placeholder="Cantidad"
+              min="1"
+            />
+            <input
+              class="formulario__submit"
+              type="submit"
+              value="Agregar al Carrito"
+            />
+          </form>
+        </div>
       </div>
     </main>
     <footer class="footer">
