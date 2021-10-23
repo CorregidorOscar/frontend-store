@@ -1,0 +1,212 @@
+:root {
+  --color-primario: #9c27b0;
+  --color-primario-oscuro: #89119d;
+  --color-secundario: #ffce00;
+  --color-secundario-oscuro: rgb(233, 287, 2);
+  --color-blanco: #fff;
+  --color-negro: #000;
+
+  --fuente-principal: "Staatliches", cursive;
+}
+
+/* aplicar un modelo de diseño de caja natural a todos los elementos, pero permitiendo que los componentes cambien */
+html {
+  box-sizing: border-box;
+  /* para que un rem tenga 10px */
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* Globales */
+body {
+  background-color: var(--color-primario);
+  font-size: 1.6rem;
+  /* interlineado, separacion entre los textos */
+  line-height: 1.5;
+}
+p {
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-blanco);
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: var(--color-secundario);
+  font-family: var(--fuente-principal);
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  margin: 3rem 0;
+}
+/* Footer */
+.footer {
+  background-color: var(--color-primario-oscuro);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.footer__texto {
+  text-align: center;
+  font-family: var(--fuente-principal);
+  font-size: 2.2rem;
+}
+/* Navegacion */
+.navegacion {
+  background-color: var(--color-primario-oscuro);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  /* forma nueva de agregar espacio entre elementos */
+  gap: 2rem;
+}
+
+.navegacion__enlace {
+  font-family: var(--fuente-principal);
+  color: var(--color-blanco);
+  font-size: 3rem;
+  /* forma vieja de añadir espacio */
+  /* margin-right: 2rem; */
+}
+/* forma vieja de añadir espacio */
+/* .navegacion__enlace:last-of-type {
+  margin-right: 0;
+} */
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+  color: var(--color-secundario);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Productos */
+.producto {
+  background-color: var(--color-primario-oscuro);
+  padding: 1rem;
+}
+.producto__imagen {
+  width: 100%;
+}
+.producto__nombre {
+  font-size: 4rem;
+}
+.producto__precio {
+  font-size: 2.8rem;
+  color: var(--color-secundario);
+  line-height: 1.2;
+}
+.producto__nombre,
+.producto__precio {
+  font-family: var(--fuente-principal);
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* Graficos */
+.grafico {
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  grid-column: 1/3;
+}
+.grafico--camisa {
+  grid-row: 2/3;
+  background-image: url("../img/grafico1.jpg");
+}
+.grafico--node {
+  background-image: url("../img/grafico2.jpg");
+  grid-row: 8/9;
+}
+/* Ya que node ocupa unas columas que no estan definidad para resoluciones pequeñas */
+@media (min-width: 768px) {
+  .grafico--node {
+    grid-row: 5/6;
+    grid-column: 2/4;
+  }
+}
+
+/* Nosotros */
+.nosotros {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+}
+@media (min-width: 768px) {
+  .nosotros {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+/* .nosotros__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.nosotros__imagen {
+  width: 100%;
+  grid-row: 1/2;
+}
+@media (min-width: 768px) {
+  .nosotros__imagen {
+    grid-column: 2/3;
+  }
+}
+
+/* Bloques */
+.bloques {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .bloques {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.bloque {
+  text-align: center;
+}
+.bloque__imagen {
+  width: 100%;
+}
+.bloque__titulo {
+  margin: 0;
+}

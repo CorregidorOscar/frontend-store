@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FrontEnd Store</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <!-- fuente y demas antes que el estilo propio -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <!-- alt es para mostrar un texto alternativo si no carga la imagen -->
+        <img class="header__logo" src="/img/logo.png" alt="logo" />
+      </a>
+    </header>
+    <nav class="navegacion">
+      <a class="navegacion__enlace navegacion__enlace--activo" href="index.html"
+        >Tienda</a
+      >
+      <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+    <main class="contenedor">
+      <h1>React JS</h1>
+      <div class="camisa"></div>
+      <img class="camisa__imagen" src="/img/3.jpg" alt="Imagen Producto" />
+      <div class="camisa__contenido">
+        <form class="formulario">
+          <p>
+            Etiam sit amet eros ex. Ut tincidunt velit neque, interdum dapibus
+            augue suscipit ut. In hac habitasse platea dictumst. Nam turpis
+            urna, volutpat gravida urna vitae, consequat ornare enim. Mauris
+            eget sodales risus. Nunc et dolor feugiat, rhoncus augue id
+          </p>
+          <select name="" id="">
+            <!-- disabled no permite seleccionar esa opcion -->
+            <option disabled selected>Seleccionar Talla</option>
+            <option value="">Chica</option>
+            <option value="">Mediana</option>
+            <option value="">Grande</option>
+          </select>
+          <input type="number" placeholder="Cantidad" min="1" />
+          <input type="submit" value="Agregar al Carrito" />
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer__texto">
+        Front End - Todos los derechos Reservados 2021
+      </p>
+    </footer>
+  </body>
+</html>
